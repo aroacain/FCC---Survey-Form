@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+  <title>Survey Form</title>
+</head>
+
+<body>
+  <h1 id="title">freeCodeCamp Pizza Request Form</h1>
+  <p id="description">Please select your desired toppings for Pizza Day</p>
+  <form id="survey-form" class="" action="index.html" method="post">
+    <label class="form-label" id="name-label" for="name">Name:</label>
+    <input class="form-input" id="name" type="text" name="name" placeholder="Enter your name" required>
+    <label class="form-label" id="email-label" for="email">Email:</label>
+    <input class="form-input" id="email" type="email" name="email" placeholder="Enter your email" required>
+    <label class="form-label" id="number-label" for="number">Number of pizzas:</label>
+    <input class="form-input" id="number" type="number" name="number" min="1" max="999" placeholder="Enter the number of pizzas">
+    <label class="form-label" id="dropdown-input" for="dropdown">Type of pizza:</label>
+    <select class="form-input" id="dropdown" name="type" required>
+      <option disabled>Please select an option</option>
+      <option value="pepperoni">Pepperoni</option>
+      <option value="vegetarian">Vegetarian</option>
+      <option value="meat-lovers">Meat lovers</option>
+      <option value="pineapple">Pineapple pizza</option>
+    </select>
+    <div class="cheese-radio">
+      <p class="form-label">How much cheese would you like on your pizza?</p>
+      <div class="cheese-radio-elements">
+        <input type="radio" id="cheese-0" name="cheese-radio" value="cheese-0">
+        <label for="cheese-0">No cheese. I am either lactose intolerant or a sociopath.</label>
+      </div>
+      <div class="cheese-radio-elements">
+        <input type="radio" id="cheese-1" name="cheese-radio" value="cheese-1">
+        <label for="cheese-1">A socially acceptable amount of cheese.</label>
+      </div>
+      <div class="cheese-radio-elements">
+        <input type="radio" id="cheese-2" name="cheese-radio" value="cheese-2">
+        <label for="cheese-2">Lots of cheese. Why are you even asking?</label>
+      </div>
+    </div>
+    <div class="toppings">
+      <p class="form-label">Toppings:</p>
+      <div class="toppings-elements">
+        <input id="meat" type="checkbox" name="toppings" value="meat">
+        <label class="toppings-option" for="meat">Meat</label>
+      </div>
+      <div class="toppings-elements">
+        <input id="more-meat" type="checkbox" name="toppings" value="more-meat">
+        <label class="toppings-option" for="more-meat">More meat</label>
+      </div>
+      <div class="toppings-elements">
+        <input id="veggies" type="checkbox" name="toppings" value="veggies">
+        <label class="toppings-option" for="veggies">Some veggies, I guess</label>
+      </div>
+    </div>
+    <label class="form-label" id="note-label" for="Note">Feel free to write any additional instructions below:</label>
+    <textarea id="note" name="note" rows="8" cols="80" placeholder="Write any additional instructions here" wrap: "hard"></textarea>
+    <input id="submit" type="submit" name="submit" value="Submit">
+  </form>
+</body>
+
+</html>
